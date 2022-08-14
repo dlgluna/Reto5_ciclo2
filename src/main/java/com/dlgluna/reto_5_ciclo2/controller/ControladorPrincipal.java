@@ -4,6 +4,10 @@
  */
 package com.dlgluna.reto_5_ciclo2.controller;
 
+import com.dlgluna.reto_5_ciclo2.model.DAO.Conexion;
+import com.dlgluna.reto_5_ciclo2.view.frmPrincipal;
+import java.sql.Connection;
+
 /**
  *
  * @author user
@@ -11,6 +15,11 @@ package com.dlgluna.reto_5_ciclo2.controller;
 public class ControladorPrincipal {
     
     public static void main(String[] args) {
+        
+     Conexion myConexion = new Conexion();
+     Connection conex = myConexion.conectar();
+     
+     new frmPrincipal().setVisible(true);
         
     }
     
