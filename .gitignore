@@ -1,0 +1,5 @@
+#ignorar base de datos
+*.db
+
+#ignorar carpeta target
+/target
