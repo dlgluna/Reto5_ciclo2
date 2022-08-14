@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.dlgluna.reto_5_ciclo2.model.VO;
 
 /**
@@ -15,19 +12,7 @@ public class Lider {
     private String primer_apellido;
     private String ciudad_residencia;
 
-    public Lider() {
-    }
-    
-    
-    public Lider(int id_lider, String nombre, String primer_apellido, String ciudad_residencia) {
-        this.id_lider = id_lider;
-        this.nombre = nombre;
-        this.primer_apellido = primer_apellido;
-        this.ciudad_residencia = ciudad_residencia;
-    }
-    
-    
-
+ 
     /**
      * @return the id_lider
      */

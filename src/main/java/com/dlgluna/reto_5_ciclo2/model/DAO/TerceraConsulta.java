@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.dlgluna.reto_5_ciclo2.model.DAO;
 
 import com.dlgluna.reto_5_ciclo2.model.VO.Compra;
@@ -9,8 +6,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -22,7 +17,7 @@ public class TerceraConsulta {
     public void tercerConsulta(DefaultTableModel modelo) {
         Compra compra = new Compra();
 
-        String sql = "select c.ID_Compra, p.Constructora, p.Banco_vinculado\n"
+        String sql = "select c.ID_Compra, p.Constructora, p.Banco_vinculado "
                 + "from Compra c "
                 + "join Proyecto p on(c.ID_Proyecto = p.ID_Proyecto) "
                 + "where c.Proveedor = 'Homecenter' "
@@ -49,7 +44,7 @@ public class TerceraConsulta {
             conex.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(PrimerConsulta.class.getName()).log(Level.SEVERE, null, e);
+             System.out.println( e.getMessage());
         }
     }
 

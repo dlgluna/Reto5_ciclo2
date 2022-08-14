@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.dlgluna.reto_5_ciclo2.view;
 
 import com.dlgluna.reto_5_ciclo2.model.DAO.PrimerConsulta;
@@ -64,6 +60,8 @@ public class frmPrincipal extends javax.swing.JFrame {
         jLabel2.setText("Lista de lideres");
 
         tblDatos.setModel(modelo1);
+        tblDatos.setEnabled(false);
+        tblDatos.setShowGrid(true);
         jScrollPane1.setViewportView(tblDatos);
 
         btnConsultarInforme1.setText("Consultar");
@@ -103,6 +101,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jLabel4.setText("Proyectos Casa Campestre");
 
         TblDatos2.setModel(modelo2);
+        TblDatos2.setEnabled(false);
         jScrollPane2.setViewportView(TblDatos2);
 
         btnConsultarInforme2.setText("Consultar");
@@ -219,9 +218,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         modelo3.addColumn("Id_Compra");
         modelo3.addColumn("Constructora");
         modelo3.addColumn("Banco_Vinculado");
+        tblDatos3.setModel(modelo3);
 
         TerceraConsulta tercer_consulta = new TerceraConsulta();
         tercer_consulta.tercerConsulta(modelo3);
+        btnConsultarInforme3.setEnabled(false);
     }//GEN-LAST:event_btnConsultarInforme3ActionPerformed
 
     private void btnConsultarInforme1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarInforme1ActionPerformed
@@ -230,9 +231,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         modelo1.addColumn("Nombre");
         modelo1.addColumn("Apellido");
         modelo1.addColumn("Ciudad_residencia");
+        tblDatos.setModel(modelo1);
 
         PrimerConsulta primer_consulta = new PrimerConsulta();
         primer_consulta.primerConsulta(modelo1);
+        btnConsultarInforme1.setEnabled(false);
     }//GEN-LAST:event_btnConsultarInforme1ActionPerformed
 
     private void btnConsultarInforme2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarInforme2ActionPerformed
@@ -241,9 +244,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         modelo2.addColumn("Constructora");
         modelo2.addColumn("Numero_habitaciones");
         modelo2.addColumn("Ciudad");
+        TblDatos2.setModel(modelo2);
 
         SegundaConsulta segunda_consulta = new SegundaConsulta();
         segunda_consulta.segundaConsulta(modelo2);
+        btnConsultarInforme2.setEnabled(false);
     }//GEN-LAST:event_btnConsultarInforme2ActionPerformed
 
     /**
