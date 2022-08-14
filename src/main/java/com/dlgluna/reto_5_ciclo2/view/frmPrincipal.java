@@ -5,6 +5,8 @@
 package com.dlgluna.reto_5_ciclo2.view;
 
 import com.dlgluna.reto_5_ciclo2.model.DAO.PrimerConsulta;
+import com.dlgluna.reto_5_ciclo2.model.DAO.SegundaConsulta;
+import com.dlgluna.reto_5_ciclo2.model.DAO.TerceraConsulta;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -104,6 +106,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         jScrollPane2.setViewportView(TblDatos2);
 
         btnConsultarInforme2.setText("Consultar");
+        btnConsultarInforme2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarInforme2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -209,6 +216,12 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void btnConsultarInforme3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarInforme3ActionPerformed
         // TODO add your handling code here:
+        modelo3.addColumn("Id_Compra");
+        modelo3.addColumn("Constructora");
+        modelo3.addColumn("Banco_Vinculado");
+
+        TerceraConsulta tercer_consulta = new TerceraConsulta();
+        tercer_consulta.tercerConsulta(modelo3);
     }//GEN-LAST:event_btnConsultarInforme3ActionPerformed
 
     private void btnConsultarInforme1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarInforme1ActionPerformed
@@ -221,6 +234,17 @@ public class frmPrincipal extends javax.swing.JFrame {
         PrimerConsulta primer_consulta = new PrimerConsulta();
         primer_consulta.primerConsulta(modelo1);
     }//GEN-LAST:event_btnConsultarInforme1ActionPerformed
+
+    private void btnConsultarInforme2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarInforme2ActionPerformed
+        // TODO add your handling code here:
+        modelo2.addColumn("Id_Proyecto");
+        modelo2.addColumn("Constructora");
+        modelo2.addColumn("Numero_habitaciones");
+        modelo2.addColumn("Ciudad");
+
+        SegundaConsulta segunda_consulta = new SegundaConsulta();
+        segunda_consulta.segundaConsulta(modelo2);
+    }//GEN-LAST:event_btnConsultarInforme2ActionPerformed
 
     /**
      * @param args the command line arguments
