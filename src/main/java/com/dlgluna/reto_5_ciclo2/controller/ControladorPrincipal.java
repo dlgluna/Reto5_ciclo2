@@ -16,9 +16,7 @@ public class ControladorPrincipal {
     
     public static void main(String[] args) {
         
-     Conexion myConexion = new Conexion();
-     Connection conex = myConexion.conectar();
-     
+         
      new frmPrincipal().setVisible(true);
         
     }
